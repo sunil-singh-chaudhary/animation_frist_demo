@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'rotate_flip_circle.dart';
+import 'animated_container.dart';
+import 'animation_card.dart';
+import 'animation_moving.dart';
 import 'three_d_animation.dart';
 
 void main() {
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        appBarTheme: AppBarTheme(backgroundColor: Colors.green),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

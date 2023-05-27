@@ -41,6 +41,9 @@ class _LeftToRightAnimationState extends State<LeftToRightAnimation>
 
   @override
   Widget build(BuildContext context) {
+    _animationController
+      ..reset()
+      ..repeat();
     return Scaffold(
       appBar: AppBar(
         title: const Text("Move Rectangle"),

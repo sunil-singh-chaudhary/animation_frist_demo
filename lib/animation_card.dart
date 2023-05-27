@@ -19,7 +19,7 @@ class _SimpleFadeInAnimationState extends State<SimpleFadeInAnimation>
       vsync: this,
       duration: const Duration(seconds: 4),
     );
-    _animation = Tween<double>(begin: 0, end: 1).animate(_controller);
+    _animation = Tween<double>(begin: 0, end: 10).animate(_controller);
     _controller.forward();
   }
 
@@ -31,6 +31,9 @@ class _SimpleFadeInAnimationState extends State<SimpleFadeInAnimation>
 
   @override
   Widget build(BuildContext context) {
+    _controller
+      ..reset()
+      ..forward();
     return Scaffold(
       appBar: AppBar(title: const Text("Animation")),
       body: Center(
@@ -42,7 +45,7 @@ class _SimpleFadeInAnimationState extends State<SimpleFadeInAnimation>
             child: Container(
               height: 100,
               width: 100,
-              color: Colors.blue,
+              color: Colors.red,
             ),
           );
         },
